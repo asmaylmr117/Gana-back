@@ -1,5 +1,5 @@
 # Azkar and Quran API
-
+![Thehco](designb.png)
 This is a Node.js Express server that provides API endpoints for accessing data related to Azkar (Islamic supplications) and Quranic Surahs. It serves as a backend for mobile or web applications, delivering structured data for Quran Surahs and Azkar sections.
 
 ## Features
