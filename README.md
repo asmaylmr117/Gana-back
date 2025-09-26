@@ -2,31 +2,6 @@
 ![Thehco](designs.png)
 This is a Node.js Express server that provides API endpoints for accessing data related to Azkar (Islamic supplications) and Quranic Surahs. It serves as a backend for mobile or web applications, delivering structured data for Quran Surahs and Azkar sections.
 
-## Azkar and Quran API URLs
-
-Base URL:
-https://gana-back-plum.vercel.app
-
-## Quran Endpoints
-
-1.  Get all Surahs:
-GET https://gana-back-plum.vercel.app/api/surahs
-
-2.  Get specific Surah by ID:
-GET https://gana-back-plum.vercel.app/api/surahs/:id
-Example: https://gana-back-plum.vercel.app/api/surahs/1
-
-## Azkar Endpoints
-
-3.  Get all Azkar sections:
-GET https://gana-back-plum.vercel.app/api/azkar/sections
-
-4.  Get Azkar by section ID:
-GET https://gana-back-plum.vercel.app/api/azkar/:sectionId
-Example: https://gana-back-plum.vercel.app/api/azkar/morning
-
-5.  Get all Azkar data (all sections and supplications):
-GET https://gana-back-plum.vercel.app/api/azkar
 
 ## Features
 
