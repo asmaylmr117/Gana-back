@@ -79,7 +79,7 @@ Start the server with:
 node server.js
 ```
 The server will run on the port specified in the `.env` file or default to port `3000`.
-
+## url : https://gana-back-plum.vercel.app/
 ## API Endpoints
 
 ### Quran Endpoints
