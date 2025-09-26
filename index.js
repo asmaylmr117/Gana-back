@@ -63,14 +63,14 @@ app.get('/api/azkar/sections', async (req, res) => {
 app.get('/api/azkar/:sectionId', async (req, res) => {
   const { sectionId } = req.params;
   try {
-    // التحقق من وجود القسم
+    
     const sectionResult = await pool.query('SELECT * FROM azkar_sections WHERE id = $1', [sectionId]);
     
     if (sectionResult.rows.length === 0) {
       return res.status(404).json({ error: 'Azkar section not found' });
     }
     
-    // جلب الأذكار الخاصة بالقسم
+    
     const azkarResult = await pool.query(
       'SELECT azkar_id as id, text, description FROM azkar WHERE section_id = $1 ORDER BY azkar_id',
       [sectionId]
@@ -89,17 +89,17 @@ app.get('/api/azkar/:sectionId', async (req, res) => {
 // Get all azkar data (sections with their azkar)
 app.get('/api/azkar', async (req, res) => {
   try {
-    // جلب جميع الأقسام
+  
     const sectionsResult = await pool.query('SELECT * FROM azkar_sections ORDER BY id');
     
-    // جلب جميع الأذكار
+    
     const azkarResult = await pool.query('SELECT * FROM azkar ORDER BY section_id, azkar_id');
     
-    // تنظيم البيانات
+   
     const azkarData = {};
     const sections = sectionsResult.rows;
     
-    // تجميع الأذكار حسب القسم
+   
     azkarResult.rows.forEach(azkar => {
       if (!azkarData[azkar.section_id]) {
         azkarData[azkar.section_id] = [];
